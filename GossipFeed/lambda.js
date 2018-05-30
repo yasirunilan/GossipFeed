@@ -5,7 +5,7 @@ let request = require('request');
 exports.handler = function (event, context, callback) {
 
 	// fetch the latest headlines
-	request.get(`https://newsapi.org/v2/top-headlines?sources=entertainment-weekly&apiKey=${process.env.KEY}`, (error, response, body) => {
+	request.get(`https://newsapi.org/v2/top-headlines?sources=sports&apiKey=${process.env.KEY}`, (error, response, body) => {
 		// early exit on failure
 		let result = JSON.parse(body);
 		if (result.status !== "ok") {
